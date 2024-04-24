@@ -58,6 +58,34 @@ body {
   z-index: 20;
 }
 
+.children-section{
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    -webkit-box-align: start;
+    padding: 30px 20px;
+    height: 60vh;
+    min-height: 100%;
+    width: 100%;
+    background-image: url("../img/hero-img-2.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 1;
+}
+
+.curved-section{
+  min-width: 100%;
+  min-height: 300px;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI0OTciIHZpZXdCb3g9IjAgMCAxNDQwIDQ5NyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAuNDc5MjE4IDBDMC40NzkyMTggMCAzMTQuNTQxIDkwLjMyNTYgNzE5Ljk4NiA5Ni4wMjRDMTEyNS40MyAxMDEuNzIyIDE0NDAuNDggMCAxNDQwLjQ4IDBWNDk2LjU4M0gwLjQ3OTIxOFYwWiIgZmlsbD0iIzk4NjYzOSIvPgo8L3N2Zz4K");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 /* Skelton loader */
 .skeleton {
