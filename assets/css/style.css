@@ -1,8 +1,5 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
-
-
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -15,11 +12,63 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* variables */
+  --header-height: 100px;
 }
 
 body {
+  font-family: "Inter", sans-serif;
   margin: 0;
   min-height: 100vh;
-  background-color: green;
-  color: yellow;
+  background-color: #fbf0e2;
+  color: black;
 }
+
+.cta-btn{
+  @apply flex items-center justify-center min-w-28 h-10 rounded-md px-5 py-2 bg-primary-orange text-white font-medium text-sm hover:opacity-90;
+}
+
+.hero-img-container{
+  height: 400px;
+  width: 80%;
+  background-color: #eee;
+  background-image: url("../img/hero-img-1.png");
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+  animation: loading 1.5s infinite;
+  -webkit-animation: loading 1.5s infinite;
+}
+
+
+/* Skelton loader */
+.skeleton {
+  background-color: #eee;
+  border-radius: 4px;
+  margin: 10px 0;
+  animation: loading 1.5s infinite;
+  -webkit-animation: loading 1.5s infinite;
+}
+
+/* Animation for skeleton */
+@keyframes loading {
+  0% {
+      background-color: #eee;
+  }
+
+  50% {
+      background-color: #ddd;
+  }
+
+  100% {
+      background-color: #eee;
+  }
+}
+
+
+@tailwind utilities;
