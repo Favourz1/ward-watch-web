@@ -87,6 +87,19 @@ body {
   background-repeat: no-repeat;
 }
 
+.iframe-container{ 
+  background-color: #eee;
+  min-height: calc(100dvh - (190px));
+  min-width: 100%;
+  animation: loading 1.5s infinite; 
+  -webkit-animation: loading 1.5s infinite;
+}
+
+.iframe-container iframe{
+  height: calc(100dvh - (190px));
+  width: 100%;
+}
+
 /* Skelton loader */
 .skeleton {
   background-color: #eee;
