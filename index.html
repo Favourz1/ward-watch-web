@@ -52,48 +52,79 @@
         <a class="hover:text-black" href="#">Contact</a>
       </div>
 
-      <button class="cta-btn">
+      <button class="cta-btn hidden md:flex">
         Contact</button>
+
+      <div class="sidebar-toggle flex md:hidden items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" viewBox="0 0 256 256">
+          <path
+            d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z">
+          </path>
+        </svg>
+      </div>
+
     </nav>
   </header>
 
-  <main>
+  <main class="relative">
 
-    <section class="min-h-[calc(100dvh-var(--header-height))]">
+    <section class="group min-h-[calc(100dvh-var(--header-height))]">
       <div class="flex items-start">
-        <!-- sidebar -->
-        <aside
-          class="min-h-[calc(100dvh-var(--header-height))] flex flex-col justify-start text-sm gap-5 px-4 py-8 bg-[#F1DCC1] w-[12.5rem] border-r border-[#cfbda5]">
 
-          <div
-            class="flex items-center gap-2 px-4 py-2 bg-[#E5C090] font-medium inset-3 shadow-inner rounded-md cursor-pointer">
-            <span>
-              <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- sidebar -->
+        <aside id="sidebar"
+          class="!z-50 min-h-full md:min-h-[calc(100dvh-var(--header-height))] w-[80%] md:w-[12.5rem] absolute left-0 transition-all duration-700 md:static translate-x-[-100%] md:translate-x-0 group-[.show-sidebar]:!translate-x-0 flex flex-col justify-start text-sm px-4 py-8 bg-[#F1DCC1] border-r border-[#cfbda5]">
+
+          <div class="relative flex flex-col justify-between md:justify-start gap-5">
+
+            <div class="sidebar-toggle flex md:hidden absolute -top-[1.725rem] right-0 items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" viewBox="0 0 256 256">
                 <path
-                  d="M8.47925 0.361084C12.6959 0.361084 16.1181 3.78331 16.1181 7.99997C16.1181 12.2166 12.6959 15.6389 8.47925 15.6389C4.26258 15.6389 0.840363 12.2166 0.840363 7.99997C0.840363 3.78331 4.26258 0.361084 8.47925 0.361084ZM8.47925 14.1111C11.8556 14.1111 14.5904 11.3764 14.5904 7.99997C14.5904 4.62358 11.8556 1.88886 8.47925 1.88886C5.10286 1.88886 2.36814 4.62358 2.36814 7.99997C2.36814 11.3764 5.10286 14.1111 8.47925 14.1111ZM8.47925 7.23608H11.5348V8.76386H8.47925V11.0555L5.4237 7.99997L8.47925 4.94442V7.23608Z"
-                  fill="#07090D" />
+                  d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z">
+                </path>
               </svg>
-            </span>
-            <span>Search</span>
+            </div>
+
+            <div class="flex flex-col justify-start gap-5">
+              <a class="w-full" href="/map">
+                <div
+                  class="flex items-center gap-2 px-4 py-2 bg-[#E5C090] font-medium inset-3 shadow-inner rounded-md cursor-pointer">
+                  <span>
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M8.47925 0.361084C12.6959 0.361084 16.1181 3.78331 16.1181 7.99997C16.1181 12.2166 12.6959 15.6389 8.47925 15.6389C4.26258 15.6389 0.840363 12.2166 0.840363 7.99997C0.840363 3.78331 4.26258 0.361084 8.47925 0.361084ZM8.47925 14.1111C11.8556 14.1111 14.5904 11.3764 14.5904 7.99997C14.5904 4.62358 11.8556 1.88886 8.47925 1.88886C5.10286 1.88886 2.36814 4.62358 2.36814 7.99997C2.36814 11.3764 5.10286 14.1111 8.47925 14.1111ZM8.47925 7.23608H11.5348V8.76386H8.47925V11.0555L5.4237 7.99997L8.47925 4.94442V7.23608Z"
+                        fill="#07090D" />
+                    </svg>
+                  </span>
+                  <span>Search</span>
+                </div>
+              </a>
+
+              <a class="w-full" href="/table">
+                <div class="flex items-center gap-2 px-4 py-2 bg-white text-primary-gray rounded-md cursor-pointer">
+                  <span>Table</span>
+                </div>
+              </a>
+
+              <a class="w-full" href="/map">
+                <div class="flex items-center gap-2 px-4 py-2 bg-white text-primary-gray rounded-md cursor-pointer">
+                  <span>Map</span>
+                </div>
+              </a>
+            </div>
+
+            <button class="cta-btn flex md:hidden">
+              Contact</button>
           </div>
 
-          <a class="w-full" href="/table">
-            <div class="flex items-center gap-2 px-4 py-2 bg-white text-primary-gray rounded-md cursor-pointer">
-              <span>Table</span>
-            </div>
-          </a>
 
-          <a class="w-full" href="/map">
-            <div class="flex items-center gap-2 px-4 py-2 bg-white text-primary-gray rounded-md cursor-pointer">
-              <span>Map</span>
-            </div>
-          </a>
         </aside>
 
-        <div class="container mx-auto min-h-full p-8 w-[calc(100%-12.5rem)]">
+        <div class="container mx-auto min-h-full p-8 px-4 md:px-8 w-full md:w-[calc(100%-12.5rem)]">
           <div class="flex flex-col md:flex-row md:items-center gap-12">
 
-            <div class="relative w-1/2 flex flex-col gap-5">
+            <div class="relative w-full md:w-1/2 flex flex-col gap-5">
               <div>
                 <h1 class="text-3xl md:text-4xl font-dmSans font-bold">
                   <span class="text-[#858446]">Welcome to</span>
@@ -101,7 +132,7 @@
                   <span class="text-[#07090D]">Wardwatch,</span>
                 </h1>
                 <br>
-                <p class="text-[#717171] ">We prioritize the well-being of children in foster care.
+                <p class="text-sm md:text-base text-[#717171]">We prioritize the well-being of children in foster care.
                   <br>
                   Join us in making a positive difference in the
                   lives of these
@@ -125,14 +156,14 @@
 
             </div>
 
-            <div class="relative w-1/2 flex flex-col items-end">
+            <div class="relative w-full md:w-1/2 flex flex-col items-end">
 
               <div class="relative hero-img-container w-[100%] md:w-[80%]">
               </div>
 
               <!-- hover container -->
               <div
-                class="w-[300px] flex flex-col gap-3 absolute bottom-[20px] left-[10px] p-6 border-2   border-[#E7EAEE] rounded-lg z-20 bg-white font-dmSans font-bold">
+                class="w-[300px] hidden md:flex flex-col gap-3 absolute bottom-[20px] left-[10px] p-6 border-2   border-[#E7EAEE] rounded-lg z-20 bg-white font-dmSans font-bold">
                 <div class="flex items-center justify-between gap-3">
                   <p class="text-lg">Total Children in Care</p>
                   <div>
@@ -163,12 +194,12 @@
     </section>
 
     <section class="relative bg-[#F2D1A6] min-h-[200px] py-8">
-      <div class="container mx-auto px-8">
+      <div class="container mx-auto px-4 md:px-8">
         <div class="flex flex-col md:flex-row items-center justify-end gap-14">
 
           <div class="dots-illustration hidden md:flex"></div>
 
-          <div class="flex items-center gap-5 text-[#323232]">
+          <div class="w-full md:w-auto flex items-center gap-5 text-[#323232]">
             <div>
               <h6 class="text-3xl font-semibold">10+</h6>
               <p>Years active</p>
@@ -198,7 +229,7 @@
     </section>
 
     <section class="relative py-8">
-      <div class="container mx-auto px-8">
+      <div class="container mx-auto px-4 md:px-8">
         <div class="flex flex-col gap-5">
 
           <div class="text-left md:text-center mb-7">
@@ -209,9 +240,9 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5 justify-items-center">
 
-          <div class="flex flex-row md:flex-col max-w-[250px] gap-6">
+          <div class="flex flex-row md:flex-col max-w-full md:max-w-[250px] gap-6">
             <div>
-              <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="41" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M10.9792 18.6666H6.81257V13.6666H10.9792V9.49992H15.9792V13.6666H20.1459V18.6666H15.9792V22.8333H10.9792V18.6666ZM13.4792 0.333252L0.145905 5.33325V15.4833C0.145905 23.8999 5.82924 31.7499 13.4792 33.6666C21.1292 31.7499 26.8126 23.8999 26.8126 15.4833V5.33325L13.4792 0.333252Z"
                   fill="#0680F0" />
@@ -225,7 +256,7 @@
               </p>
             </div>
           </div>
-          <div class="flex flex-row md:flex-col max-w-[250px] gap-6">
+          <div class="flex flex-row md:flex-col max-w-full md:max-w-[250px] gap-6">
             <div>
               <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -242,7 +273,7 @@
               </p>
             </div>
           </div>
-          <div class="flex flex-row md:flex-col max-w-[250px] gap-6">
+          <div class="flex flex-row md:flex-col max-w-full md:max-w-[250px] gap-6">
             <div>
               <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -267,19 +298,19 @@
     <section class="children-section"></section>
 
     <section class="relative py-8">
-      <div class="container mx-auto px-8">
-        <div class="flex items-center gap-12">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="flex flex-col md:flex-row items-start md:items-center gap-12">
 
-          <div class="w-[60%] flex flex-col gap-2">
+          <div class="w-full md:w-[60%] flex flex-col gap-2">
             <h4 class="font-bold text-3xl">Have Questions or Feedback?</h4>
-            <p class="font-medium text-lg max-w-[60%]">
+            <p class="font-medium text-lg max-w-full md:max-w-[60%]">
               We're here to help!
               Reach out to us using the form
               or contact us directly at <a class="underline" href="mailto:help@wardwatch.com">help@wardwatch.com</a>
             </p>
           </div>
 
-          <div class="w-[40%] flex flex-col">
+          <div class="w-full md:w-[40%] flex flex-col">
             <form action="" class="flex flex-col gap-2 font-dmSans">
               <input type="text"
                 class="h-[50px] px-4 py-2 bg-transparent border-b-2 border-black caret-black focus:shadow-none focus-visible:outline-none placeholder:text-black"
@@ -301,8 +332,8 @@
       </div>
     </section>
 
-    <section class="curved-section relative py-8 pt-[15%] text-white">
-      <div class="z-20 container mx-auto px-8">
+    <section class="curved-section relative py-8 pt-[30%] md:pt-[15%] text-white">
+      <div class="z-20 container mx-auto px-4 md:px-8">
         <div class="flex flex-col items-center justify-center text-center">
           <div class="mb-4">
             <p class="text-xl font-medium">Connect with us on social media</p>
@@ -343,12 +374,12 @@
   <footer class="bg-[#50351D] text-white p-4">
     <div class="container mx-auto">
       <div class="flex items-center justify-center">
-        Copyright &copy; <span class="footer-year"></span>
+        Copyright &copy; &nbsp; <span class="footer-year"></span>
       </div>
     </div>
   </footer>
 
-  <!-- <script type="module" src="/main.js"></script> -->
+  <script type="module" src="./assets/js/main.js"></script>
   <script>
     window.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".footer-year").textContent = new Date().getFullYear();

@@ -17,6 +17,17 @@
   --header-height: 100px;
 }
 
+*{
+  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+}
+html, body{
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Inter", sans-serif;
   margin: 0;
@@ -35,6 +46,7 @@ body {
   background-color: #eee;
   background-image: url("../img/hero-img-1.png");
   background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
   overflow: hidden;
   border-radius: 16px;
