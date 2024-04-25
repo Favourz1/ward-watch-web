@@ -15,6 +15,7 @@
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
 </head>
 
 <body>
@@ -127,7 +128,10 @@
             <div class="relative w-full md:w-1/2 flex flex-col gap-5">
               <div>
                 <h1 class="text-3xl md:text-4xl font-dmSans font-bold">
-                  <span class="text-[#858446]">Welcome to</span>
+                  <span>
+                    <span class="text-[#858446]">Welcome</span>
+                    <span class="text-[#07090D]">to</span>
+                  </span>
                   <br>
                   <span class="text-[#07090D]">Wardwatch,</span>
                 </h1>
@@ -158,12 +162,25 @@
 
             <div class="relative w-full md:w-1/2 flex flex-col items-end">
 
-              <div class="relative hero-img-container w-[100%] md:w-[80%]">
+              <div class="absolute z-10 hero-img-container w-[100%] md:w-[80%]"></div>
+
+              <div class="-z-1 hero-img-grid grid grid-cols-2 gap-4 w-[100%] md:w-[80%]">
+                <img src="./assets/img/hero-img-1.png" alt=""
+                  class="w-52 h-52 object-cover border-4 border-[#F2D1A6] rounded-lg !origin-top-left"
+                  style="transform-origin: top left;">
+                <img src="./assets/img/hero-img-4.jpg" alt=""
+                  class="w-52 h-52 object-cover border-4 border-[#F2D1A6] rounded-lg">
+                <img src="./assets/img/hero-img-2.png" alt=""
+                  class="w-52 h-52 object-cover border-4 border-[#F2D1A6] rounded-lg">
+                <img src="./assets/img/hero-img-3.png" alt=""
+                  class="w-52 h-52 object-cover border-4 border-[#F2D1A6] rounded-lg">
               </div>
+
+
 
               <!-- hover container -->
               <div
-                class="w-[300px] hidden md:flex flex-col gap-3 absolute bottom-[20px] left-[10px] p-6 border-2   border-[#E7EAEE] rounded-lg z-20 bg-white font-dmSans font-bold">
+                class="hero-img-card w-[300px] hidden md:flex flex-col gap-3 absolute bottom-[20px] left-[10px] p-6 border-2   border-[#E7EAEE] rounded-lg z-20 bg-white font-dmSans font-bold">
                 <div class="flex items-center justify-between gap-3">
                   <p class="text-lg">Total Children in Care</p>
                   <div>
@@ -383,6 +400,39 @@
   <script>
     window.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".footer-year").textContent = new Date().getFullYear();
+
+      const gridEl = gsap.utils.toArray(document.querySelectorAll('.hero-img-grid img'))
+
+      const gsapHeroTl = gsap.timeline({
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 1
+      });
+
+      gsapHeroTl.set(gridEl, { scale: 0, opacity: 0 })
+
+      gsapHeroTl.to(".hero-img-container", {
+        scale: 0,
+        opacity: 0,
+        zIndex: -2,
+        transformOrigin: "top left",
+        duration: 4,
+        ease: "power2.inOut",
+        delay: 1
+      })
+        .to(gridEl, {
+          scale: 1,
+          opacity: 1,
+          stagger: -0.5,
+          transformOrigin: "center center",
+          duration: 4,
+          ease: "power2.inOut",
+        }, 0)
+        .to(".hero-img-container", {
+          opacity: 0,
+        })
+
+
     })
   </script>
 </body>
