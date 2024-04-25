@@ -52,48 +52,79 @@
                 <a class="hover:text-black" href="#">Contact</a>
             </div>
 
-            <button class="cta-btn">
+            <button class="cta-btn hidden md:flex">
                 Contact</button>
+
+            <div class="sidebar-toggle flex md:hidden items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" viewBox="0 0 256 256">
+                    <path
+                        d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z">
+                    </path>
+                </svg>
+            </div>
+
         </nav>
     </header>
 
-    <main>
+    <main class="relative">
 
-        <section class="h-[calc(100dvh-var(--header-height))] overflow-hidden">
+        <section class="group h-[calc(100dvh-var(--header-height))] overflow-hidden">
             <div class="flex items-start">
                 <!-- sidebar -->
-                <aside
-                    class="min-h-[calc(100dvh-var(--header-height))] flex flex-col justify-start text-sm gap-5 px-4 py-8 bg-[#F1DCC1] w-[12.5rem] border-r border-[#cfbda5]">
+                <aside id="sidebar"
+                    class="!z-50 min-h-full md:min-h-[calc(100dvh-var(--header-height))] w-[80%] md:w-[12.5rem] absolute left-0 transition-all duration-700 md:static translate-x-[-100%] md:translate-x-0 group-[.show-sidebar]:!translate-x-0 flex flex-col justify-start text-sm px-4 py-8 bg-[#F1DCC1] border-r border-[#cfbda5]">
 
-                    <div
-                        class="flex items-center gap-2 px-4 py-2 bg-[#E5C090] font-medium inset-3 shadow-inner rounded-md cursor-pointer">
-                        <span>
-                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                    <div class="relative flex flex-col justify-between md:justify-start gap-5">
+
+                        <div
+                            class="sidebar-toggle flex md:hidden absolute -top-[1.725rem] right-0 items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000"
+                                viewBox="0 0 256 256">
                                 <path
-                                    d="M8.47925 0.361084C12.6959 0.361084 16.1181 3.78331 16.1181 7.99997C16.1181 12.2166 12.6959 15.6389 8.47925 15.6389C4.26258 15.6389 0.840363 12.2166 0.840363 7.99997C0.840363 3.78331 4.26258 0.361084 8.47925 0.361084ZM8.47925 14.1111C11.8556 14.1111 14.5904 11.3764 14.5904 7.99997C14.5904 4.62358 11.8556 1.88886 8.47925 1.88886C5.10286 1.88886 2.36814 4.62358 2.36814 7.99997C2.36814 11.3764 5.10286 14.1111 8.47925 14.1111ZM8.47925 7.23608H11.5348V8.76386H8.47925V11.0555L5.4237 7.99997L8.47925 4.94442V7.23608Z"
-                                    fill="#07090D" />
+                                    d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z">
+                                </path>
                             </svg>
-                        </span>
-                        <span>Search</span>
+                        </div>
+
+                        <div class="flex flex-col justify-start gap-5">
+                            <a class="w-full" href="/map">
+                                <div
+                                    class="flex items-center gap-2 px-4 py-2 bg-[#E5C090] font-medium inset-3 shadow-inner rounded-md cursor-pointer">
+                                    <span>
+                                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.47925 0.361084C12.6959 0.361084 16.1181 3.78331 16.1181 7.99997C16.1181 12.2166 12.6959 15.6389 8.47925 15.6389C4.26258 15.6389 0.840363 12.2166 0.840363 7.99997C0.840363 3.78331 4.26258 0.361084 8.47925 0.361084ZM8.47925 14.1111C11.8556 14.1111 14.5904 11.3764 14.5904 7.99997C14.5904 4.62358 11.8556 1.88886 8.47925 1.88886C5.10286 1.88886 2.36814 4.62358 2.36814 7.99997C2.36814 11.3764 5.10286 14.1111 8.47925 14.1111ZM8.47925 7.23608H11.5348V8.76386H8.47925V11.0555L5.4237 7.99997L8.47925 4.94442V7.23608Z"
+                                                fill="#07090D" />
+                                        </svg>
+                                    </span>
+                                    <span>Search</span>
+                                </div>
+                            </a>
+
+                            <a class="w-full" href="/table">
+                                <div
+                                    class="flex items-center gap-2 px-4 py-2 bg-white text-primary-gray rounded-md cursor-pointer">
+                                    <span>Table</span>
+                                </div>
+                            </a>
+
+                            <a class="w-full" href="/map">
+                                <div
+                                    class="flex items-center gap-2 px-4 py-2 bg-white text-primary-gray rounded-md cursor-pointer">
+                                    <span>Map</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <button class="cta-btn flex md:hidden">
+                            Contact</button>
                     </div>
 
-                    <a class="w-full" href="/table">
-                        <div
-                            class="flex items-center gap-2 px-4 py-2 bg-primary-orange text-white rounded-md cursor-pointer">
-                            <span>Table</span>
-                        </div>
-                    </a>
 
-                    <a class="w-full" href="/map">
-                        <div
-                            class="flex items-center gap-2 px-4 py-2 bg-white text-primary-gray rounded-md cursor-pointer">
-                            <span>Map</span>
-                        </div>
-                    </a>
                 </aside>
 
-                <div class="container mx-auto min-h-full p-8 w-[calc(100%-12.5rem)]">
+                <div class="container mx-auto min-h-full p-8 px-4 md:px-8 w-full md:w-[calc(100%-12.5rem)]">
                     <div class="flex flex-col gap-1">
                         <h1 class="text-3xl font-dmSans font-bold text-[#07090D]">Table</h1>
                         <div class="iframe-container">
