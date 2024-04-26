@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
   <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
@@ -127,20 +127,16 @@
 
             <div class="relative w-full md:w-1/2 flex flex-col gap-5">
               <div>
-                <h1 class="text-3xl md:text-4xl font-dmSans font-bold">
-                  <span>
-                    <span class="text-[#858446]">Welcome</span>
-                    <span class="text-[#07090D]">to</span>
-                  </span>
+                <h1 class="text-3xl md:text-4xl font-montserrat font-bold">
+                  <span class="text-[#858446]">Bristol Children</span>
                   <br>
-                  <span class="text-[#07090D]">Wardwatch,</span>
+                  <span class="text-[#07090D]">ward watch</span>
                 </h1>
                 <br>
-                <p class="text-sm md:text-base text-[#717171]">We prioritize the well-being of children in foster care.
-                  <br>
-                  Join us in making a positive difference in the
-                  lives of these
-                  children today.
+                <p class="text-sm md:text-base text-[#717171]">We priotize the well-being of children in <span
+                    class="text-[#2F2F2F] underline">Bristol
+                    social care</span>
+                  Join us in making a positive difference in the lives of these children today.
                 </p>
               </div>
 
@@ -180,7 +176,7 @@
 
               <!-- hover container -->
               <div
-                class="hero-img-card w-[300px] hidden md:flex flex-col gap-3 absolute bottom-[20px] left-[10px] p-6 border-2   border-[#E7EAEE] rounded-lg z-20 bg-white font-dmSans font-bold">
+                class="hero-img-card w-[300px] hidden md:flex flex-col gap-3 absolute bottom-[20px] left-[10px] p-6 border-2   border-[#E7EAEE] rounded-lg z-20 bg-white font-montserrat font-bold">
                 <div class="flex items-center justify-between gap-3">
                   <p class="text-lg">Total Children in Care</p>
                   <div>
@@ -266,7 +262,7 @@
               </svg>
             </div>
             <div>
-              <p class="font-semibold text-xl font-dmSans">Medicals</p>
+              <p class="font-semibold text-xl font-montserrat">Medicals</p>
               <p class="text-sm text-balance">Comprehensive healthcare services catered to every child's needs,
                 prioritizing wellness and providing compassionate care
                 for their physical and emotional health.
@@ -282,7 +278,7 @@
               </svg>
             </div>
             <div>
-              <p class="font-semibold text-xl font-dmSans">Education</p>
+              <p class="font-semibold text-xl font-montserrat">Education</p>
               <p class="text-sm text-balance">
                 Unlocking potential through tailored learning programs, ensuring every child reaches their academic
                 goals with
@@ -300,7 +296,7 @@
 
             </div>
             <div>
-              <p class="font-semibold text-xl font-dmSans">Infant Care</p>
+              <p class="font-semibold text-xl font-montserrat">Infant Care</p>
               <p class="text-sm text-balance">Nurturing environments and expert care for infants, fostering early
                 development milestones and ensuring a safe, loving
                 atmosphere for their growth and happiness.
@@ -328,7 +324,7 @@
           </div>
 
           <div class="w-full md:w-[40%] flex flex-col">
-            <form action="" class="flex flex-col gap-2 font-dmSans">
+            <form action="" class="flex flex-col gap-2 font-montserrat">
               <input type="text"
                 class="h-[50px] px-4 py-2 bg-transparent border-b-2 border-black caret-black focus:shadow-none focus-visible:outline-none placeholder:text-black"
                 placeholder="Name">
@@ -406,7 +402,7 @@
       const gsapHeroTl = gsap.timeline({
         repeat: -1,
         yoyo: true,
-        repeatDelay: 1
+        repeatDelay: 2
       });
 
       gsapHeroTl.set(gridEl, { scale: 0, opacity: 0 })

@@ -10,7 +10,7 @@ export default {
         "primary-gray": "#586174"
       },
       fontFamily: {
-        dmSans: "'DM Sans', sans-serif"
+        montserrat: "'Montserrat', sans-serif"
       }
     },
   },
