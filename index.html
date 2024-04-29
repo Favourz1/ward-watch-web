@@ -25,62 +25,7 @@
     <section class="group min-h-[calc(100dvh-var(--header-height))]">
       <div class="flex items-start">
 
-
-        <!-- sidebar -->
-        <aside id="sidebar"
-          class="!z-50 min-h-full md:min-h-[calc(100dvh-var(--header-height))] w-[80%] md:w-[12.5rem] absolute left-0 transition-all duration-700 md:static translate-x-[-100%] md:translate-x-0 group-[.show-sidebar]:!translate-x-0 flex flex-col justify-start text-sm px-4 py-8 bg-[#F1DCC1] border-r border-[#cfbda5]">
-
-          <div class="relative flex flex-col justify-between md:justify-start gap-5">
-
-            <div
-              class="sidebar-toggle flex md:hidden absolute -top-[1.725rem] right-0 items-center justify-center cursor-pointer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" viewBox="0 0 256 256">
-                <path
-                  d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z">
-                </path>
-              </svg>
-            </div>
-
-            <div class="flex flex-col justify-start gap-5">
-              <a class="w-full" href="/map">
-                <div
-                  class="flex items-center gap-2 px-4 py-2 bg-[#E5C090] font-medium inset-3 shadow-inner rounded-md cursor-pointer">
-                  <span>
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M12.9793 11H12.1893L11.9093 10.73C12.9231 9.55402 13.4804 8.0527 13.4793 6.5C13.4793 5.21442 13.098 3.95772 12.3838 2.8888C11.6696 1.81988 10.6544 0.986756 9.46669 0.494786C8.27897 0.00281635 6.97204 -0.125905 5.71116 0.124899C4.45029 0.375703 3.2921 0.994767 2.38306 1.90381C1.47402 2.81285 0.854951 3.97104 0.604147 5.23192C0.353343 6.49279 0.482064 7.79973 0.974034 8.98744C1.466 10.1752 2.29913 11.1903 3.36804 11.9046C4.43696 12.6188 5.69367 13 6.97925 13C8.58925 13 10.0693 12.41 11.2093 11.43L11.4793 11.71V12.5L16.4793 17.49L17.9693 16L12.9793 11ZM6.97925 11C4.48925 11 2.47925 8.99 2.47925 6.5C2.47925 4.01 4.48925 2 6.97925 2C9.46925 2 11.4793 4.01 11.4793 6.5C11.4793 8.99 9.46925 11 6.97925 11Z"
-                        fill="#07090D" />
-                    </svg>
-                  </span>
-                  <span>Search</span>
-                </div>
-              </a>
-
-              <a class="w-full" href="/">
-                <div class="flex items-center gap-2 px-4 py-2 bg-primary-orange text-white rounded-md cursor-pointer">
-                  <span>Home</span>
-                </div>
-              </a>
-
-              <a class="w-full" href="/table">
-                <div class="flex items-center gap-2 px-4 py-2 bg-white text-primary-gray rounded-md cursor-pointer">
-                  <span>Table</span>
-                </div>
-              </a>
-
-              <a class="w-full" href="/map">
-                <div class="flex items-center gap-2 px-4 py-2 bg-white text-primary-gray rounded-md cursor-pointer">
-                  <span>Map</span>
-                </div>
-              </a>
-            </div>
-
-            <button class="cta-btn flex md:hidden">
-              Contact</button>
-          </div>
-
-
-        </aside>
+        <sidebar-main page="home"></sidebar-main>
 
         <div class="container mx-auto min-h-full p-8 px-4 md:px-8 w-full md:w-[calc(100%-12.5rem)]">
           <div class="flex flex-col md:flex-row md:items-center gap-12">
